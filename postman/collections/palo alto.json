@@ -1,14 +1,14 @@
 {
 	"info": {
-		"_postman_id": "20476d93-19fe-4eeb-9fd4-2fd4700208fa",
+		"_postman_id": "050f13de-6530-4e50-a679-18be154b3ecf",
 		"name": "palo alto",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "34759034-20476d93-19fe-4eeb-9fd4-2fd4700208fa"
+		"_uid": "34759034-050f13de-6530-4e50-a679-18be154b3ecf"
 	},
 	"item": [
 		{
 			"name": "get api-key",
-			"id": "8437207b-9490-4ea6-a18b-83e6254468cd",
+			"id": "aa85d479-aa68-46b5-aec2-b8495d4211a9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -44,7 +44,7 @@
 		},
 		{
 			"name": "address object",
-			"id": "2a8bca11-352c-40f4-b1aa-aa0e45ea3d2f",
+			"id": "d118b737-7d40-4bfb-b0b6-58ac5c221670",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -93,7 +93,7 @@
 		},
 		{
 			"name": "Create an Address Object",
-			"id": "c2c9687f-3585-47b2-b523-b25c65377537",
+			"id": "68fab631-838f-497b-a7a5-e9961b85ca94",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -155,7 +155,7 @@
 		},
 		{
 			"name": "commit",
-			"id": "95fe8dba-14e5-46eb-829b-afdf1bac027c",
+			"id": "858b0a15-42b8-403b-a8ba-54e70356d3f9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -215,7 +215,7 @@
 		},
 		{
 			"name": "List security rules",
-			"id": "830c4299-de77-4720-ac18-296aecb68077",
+			"id": "be17bcc9-1a46-4099-b405-502792e3cd2c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -264,7 +264,7 @@
 		},
 		{
 			"name": "List NAT rules",
-			"id": "87464f33-6c39-468d-9834-b226fda8220a",
+			"id": "fdd8202d-0641-4a82-afbe-c8c281094ae9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -322,7 +322,7 @@
 		},
 		{
 			"name": "commit-all",
-			"id": "2330e7e3-cdc2-43c8-937f-f57a933bf005",
+			"id": "25128c47-483f-4771-8624-a97568fe1634",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
