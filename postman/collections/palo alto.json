@@ -182,15 +182,6 @@
 				},
 				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.2.10/32\"\r\n    }\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "{{url}}/api/?type=commit&action=partial&cmd=<commit></commit>",
 					"host": [
