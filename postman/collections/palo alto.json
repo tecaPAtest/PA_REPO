@@ -7,6 +7,11 @@
 	},
 	"item": [
 		{
+			"name": "New Folder",
+			"item": [],
+			"id": "6b5c7243-1194-4970-935f-23d5a847cfeb"
+		},
+		{
 			"name": "get api-key",
 			"id": "aa85d479-aa68-46b5-aec2-b8495d4211a9",
 			"protocolProfileBehavior": {
@@ -117,7 +122,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv06\",\r\n    \"ip-netmask\": \"10.1.1.6/32\"\r\n    }\r\n}",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.2.10/32\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -125,7 +130,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv06",
+					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv10",
 					"host": [
 						"{{url}}"
 					],
@@ -146,7 +151,7 @@
 						},
 						{
 							"key": "name",
-							"value": "Khanhpv06"
+							"value": "Khanhpv10"
 						}
 					]
 				}
@@ -179,7 +184,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv05\",\r\n    \"ip-netmask\": \"10.1.2.5/32\"\r\n    }\r\n}",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.2.10/32\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -321,8 +326,8 @@
 			"response": []
 		},
 		{
-			"name": "commit-all",
-			"id": "25128c47-483f-4771-8624-a97568fe1634",
+			"name": "commit all",
+			"id": "751f0f73-bb75-4a72-bc0a-2c45b4e8b2ad",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -342,17 +347,8 @@
 						}
 					]
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.1.10/32\"\r\n    }\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "{{url}}/api/?type=commit&action=all&cmd=<commit-all></commit-all>",
 					"host": [
