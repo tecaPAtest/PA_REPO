@@ -135,7 +135,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.2.10/32\"\r\n    }\r\n}",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv22\",\r\n    \"ip-netmask\": \"10.1.2.22/32\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -143,7 +143,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv10",
+					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv22",
 					"host": [
 						"{{url}}"
 					],
@@ -164,7 +164,7 @@
 						},
 						{
 							"key": "name",
-							"value": "Khanhpv10"
+							"value": "Khanhpv22"
 						}
 					]
 				}
@@ -351,7 +351,7 @@
 						}
 					]
 				},
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": "{{url}}/api/?type=commit&action=all&cmd=<commit-all></commit-all>",
