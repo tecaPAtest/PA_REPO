@@ -14,5 +14,7 @@ files[] = {"id":"34759034-050f13de-6530-4e50-a679-18be154b3ecf","path":"palo alt
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
+files[] = {"path":"postman/collections/PA.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
+type = openapi:3
