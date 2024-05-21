@@ -14,7 +14,5 @@ files[] = {"id":"34759034-dc0f3fd8-1c6c-442c-84f6-581051d4c180","path":"palo alt
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
-files[] = {"path":"Test.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
-type = openapi:3
