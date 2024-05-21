@@ -16,6 +16,7 @@ files[] = {"id":"34759034-050f13de-6530-4e50-a679-18be154b3ecf","path":"palo alt
 [config.relations.apiDefinition]
 files[] = {"path":"postman/collections/New (1).json","metaData":{}}
 files[] = {"path":"postman/collections/New.json","metaData":{}}
+files[] = {"path":"postman/collections/pa123.json","metaData":{}}
 files[] = {"path":"postman/collections/palo alto.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
