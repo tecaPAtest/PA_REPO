@@ -1,14 +1,19 @@
 {
 	"info": {
-		"_postman_id": "dc0f3fd8-1c6c-442c-84f6-581051d4c180",
+		"_postman_id": "050f13de-6530-4e50-a679-18be154b3ecf",
 		"name": "palo alto",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "34759034-dc0f3fd8-1c6c-442c-84f6-581051d4c180"
+		"_uid": "34759034-050f13de-6530-4e50-a679-18be154b3ecf"
 	},
 	"item": [
 		{
+			"name": "New Folder",
+			"item": [],
+			"id": "6b5c7243-1194-4970-935f-23d5a847cfeb"
+		},
+		{
 			"name": "get api-key",
-			"id": "25338871-7925-4eaa-83e3-ed15c19af2f1",
+			"id": "aa85d479-aa68-46b5-aec2-b8495d4211a9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -44,7 +49,7 @@
 		},
 		{
 			"name": "address object",
-			"id": "2cf45ae1-4524-480d-927a-579e4db5f5bf",
+			"id": "d118b737-7d40-4bfb-b0b6-58ac5c221670",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -93,7 +98,7 @@
 		},
 		{
 			"name": "Create an Address Object",
-			"id": "686f56fe-0d6f-4b96-84ed-a126601d18c6",
+			"id": "68fab631-838f-497b-a7a5-e9961b85ca94",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -117,7 +122,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv06\",\r\n    \"ip-netmask\": \"10.1.1.6/32\"\r\n    }\r\n}",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.2.10/32\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -125,7 +130,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv06",
+					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv10",
 					"host": [
 						"{{url}}"
 					],
@@ -146,7 +151,7 @@
 						},
 						{
 							"key": "name",
-							"value": "Khanhpv06"
+							"value": "Khanhpv10"
 						}
 					]
 				}
@@ -155,7 +160,7 @@
 		},
 		{
 			"name": "commit",
-			"id": "6cbea57b-b493-42b6-8f2e-7e5575ae6b78",
+			"id": "858b0a15-42b8-403b-a8ba-54e70356d3f9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -179,7 +184,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv05\",\r\n    \"ip-netmask\": \"10.1.2.5/32\"\r\n    }\r\n}",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.2.10/32\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -215,7 +220,7 @@
 		},
 		{
 			"name": "List security rules",
-			"id": "82af98c1-3a35-46cb-be0c-e96cc8a6164d",
+			"id": "be17bcc9-1a46-4099-b405-502792e3cd2c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -264,7 +269,7 @@
 		},
 		{
 			"name": "List NAT rules",
-			"id": "531aa115-c037-4c7d-9445-bd3514e76ccf",
+			"id": "fdd8202d-0641-4a82-afbe-c8c281094ae9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -321,8 +326,8 @@
 			"response": []
 		},
 		{
-			"name": "commit-all",
-			"id": "8dd625af-437f-4903-a9e0-c308d21c5a1c",
+			"name": "commit all",
+			"id": "751f0f73-bb75-4a72-bc0a-2c45b4e8b2ad",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -342,17 +347,8 @@
 						}
 					]
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.1.10/32\"\r\n    }\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "{{url}}/api/?type=commit&action=all&cmd=<commit-all></commit-all>",
 					"host": [

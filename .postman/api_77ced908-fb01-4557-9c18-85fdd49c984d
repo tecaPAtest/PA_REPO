@@ -3,16 +3,18 @@ configVersion = 1.1.0
 type = apiEntityData
 
 [config]
-id = 02720119-5d43-47a6-bd1b-c505554e2807
+id = 77ced908-fb01-4557-9c18-85fdd49c984d
 
 [config.relations]
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"34759034-dc0f3fd8-1c6c-442c-84f6-581051d4c180","path":"palo alto.json","metaData":{}}
+files[] = {"id":"34759034-20476d93-19fe-4eeb-9fd4-2fd4700208fa","path":"palo alto.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
+files[] = {"path":"index.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
+type = openapi:3
