@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "dc0f3fd8-1c6c-442c-84f6-581051d4c180",
+		"name": "palo alto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "34759034-dc0f3fd8-1c6c-442c-84f6-581051d4c180"
+	},
+	"item": [
+		{
+			"name": "get api-key",
+			"id": "25338871-7925-4eaa-83e3-ed15c19af2f1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/?type=keygen&user={{username}}&password={{password}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "keygen"
+						},
+						{
+							"key": "user",
+							"value": "{{username}}"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "address object",
+			"id": "2cf45ae1-4524-480d-927a-579e4db5f5bf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"Addresses"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an Address Object",
+			"id": "686f56fe-0d6f-4b96-84ed-a126601d18c6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv06\",\r\n    \"ip-netmask\": \"10.1.1.6/32\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv06",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"Addresses"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "Khanhpv06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commit",
+			"id": "6cbea57b-b493-42b6-8f2e-7e5575ae6b78",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv05\",\r\n    \"ip-netmask\": \"10.1.2.5/32\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/?type=commit&action=partial&cmd=<commit></commit>",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "commit"
+						},
+						{
+							"key": "action",
+							"value": "partial"
+						},
+						{
+							"key": "cmd",
+							"value": "<commit></commit>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List security rules",
+			"id": "82af98c1-3a35-46cb-be0c-e96cc8a6164d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Policies/SecurityRules?location=vsys&vsys=vsys1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Policies",
+						"SecurityRules"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List NAT rules",
+			"id": "531aa115-c037-4c7d-9445-bd3514e76ccf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Policies/NatRules?location=vsys&vsys=vsys1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Policies",
+						"NatRules"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commit-all",
+			"id": "8dd625af-437f-4903-a9e0-c308d21c5a1c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv10\",\r\n    \"ip-netmask\": \"10.1.1.10/32\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/?type=commit&action=all&cmd=<commit-all></commit-all>",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "commit"
+						},
+						{
+							"key": "action",
+							"value": "all"
+						},
+						{
+							"key": "cmd",
+							"value": "<commit-all></commit-all>"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
