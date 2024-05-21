@@ -1,6 +1,6 @@
 {
   "entry": {
-    "@name": "Khanhpv10",
-    "ip-netmask": "10.1.1.10/32"
+    "@name": "Khanhpv20",
+    "ip-netmask": "10.1.1.20/32"
     }
 }
