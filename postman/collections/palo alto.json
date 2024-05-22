@@ -10,14 +10,118 @@
 			"name": "New Folder",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Rule-Security",
 					"id": "12649d30-ae69-4da6-8c75-fdc9b7e15ab6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "{{key_header}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"Khanhpv12\",\r\n            \"@location\": \"vsys\",\r\n            \"@vsys\": \"vsys1\",\r\n            \"to\": {\r\n                \"member\": [\r\n                    \"any\"\r\n                ]\r\n            },\r\n            \"from\": {\r\n                \"member\": [\r\n                    \"USERS\"\r\n                ]\r\n            },\r\n            \"source\": {\r\n                \"member\": [\r\n                    \"any\"\r\n                ]\r\n            },\r\n            \"destination\": {\r\n                \"member\": [\r\n                    \"10.10.10.12/24\"\r\n                ]\r\n            },\r\n            \"source-user\": {\r\n                \"member\": [\r\n                    \"any\"\r\n                ]\r\n            },\r\n            \"category\": {\r\n                \"member\": [\r\n                    \"any\"\r\n                ]\r\n            },\r\n            \"application\": {\r\n                \"member\": [\r\n                    \"any\"\r\n                ]\r\n            },\r\n            \"service\": {\r\n                \"member\": [\r\n                    \"application-default\"\r\n                ]\r\n            },\r\n            \"source-hip\": {\r\n                \"member\": [\r\n                    \"any\"\r\n                ]\r\n            },\r\n            \"destination-hip\": {\r\n                \"member\": [\r\n                    \"any\"\r\n                ]\r\n            },\r\n            \"action\": \"allow\",\r\n            \"log-start\": \"yes\",\r\n            \"description\": \"Enable Khanhpv12 access from test networks\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/restapi/{{version}}/Policies/SecurityRules?location=vsys&vsys=vsys1&name=Khanhpv12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"restapi",
+								"{{version}}",
+								"Policies",
+								"SecurityRules"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "vsys"
+								},
+								{
+									"key": "vsys",
+									"value": "vsys1"
+								},
+								{
+									"key": "name",
+									"value": "Khanhpv12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "8d8c9d41-0c6a-4b67-8231-3f4a21910b22",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "{{key_header}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"ethernet1/1.12\",\r\n            \"ndp-proxy\": {\r\n                \"enabled\": \"no\"\r\n            },\r\n            \"adjust-tcp-mss\": {\r\n                \"enable\": \"no\"\r\n            },\r\n            \"ip\": {\r\n                \"entry\": [\r\n                    {\r\n                        \"@name\": \"192.168.10.20\"\r\n                    }\r\n                ]\r\n            },\r\n            \"tag\": \"10\",\r\n            \"comment\": \"Users\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/restapi/{{version}}/Network/EthernetInterfaces?name=ethernet1%2F1.12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"restapi",
+								"{{version}}",
+								"Network",
+								"EthernetInterfaces"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ethernet1%2F1.12"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -135,7 +239,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv22\",\r\n    \"ip-netmask\": \"10.1.2.22/32\"\r\n    }\r\n}",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv45\",\r\n    \"ip-netmask\": \"10.1.2.45/32\"\r\n    }\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -143,7 +247,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv22",
+					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=Khanhpv45",
 					"host": [
 						"{{url}}"
 					],
@@ -164,7 +268,7 @@
 						},
 						{
 							"key": "name",
-							"value": "Khanhpv22"
+							"value": "Khanhpv45"
 						}
 					]
 				}
