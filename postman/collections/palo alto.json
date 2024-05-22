@@ -483,6 +483,68 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Create an address group",
+			"id": "c2a7851d-0228-4f7e-aec9-6a45133247cb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv60\",\r\n    \"ip-netmask\": \"10.1.2.60/32\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/AddressGroups?location=vsys&vsys=vsys1&name=Group1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"AddressGroups"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "Group1"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
