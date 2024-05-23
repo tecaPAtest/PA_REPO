@@ -133,12 +133,83 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				}
 			],
 			"id": "6b5c7243-1194-4970-935f-23d5a847cfeb"
+		},
+		{
+			"name": "region",
+			"item": [
+				{
+					"name": "Region_data",
+					"id": "79c188c7-838d-4b7b-8661-54ca3f173266",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "{{key_header}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"KhanhtecaIT\",\r\n    \"geo-location\": {\r\n      \"latitude\": -90,\r\n      \"longitude\": -180\r\n    },\r\n    \"address\": {\r\n      \"member\": [\r\n        \"10.1.10.25/24\"\r\n      ]\r\n    }\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/restapi/v10.2/Objects/Regions?location=vsys&vsys=vsys1&name=KhanhtecaIT",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"restapi",
+								"v10.2",
+								"Objects",
+								"Regions"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "vsys"
+								},
+								{
+									"key": "vsys",
+									"value": "vsys1"
+								},
+								{
+									"key": "name",
+									"value": "KhanhtecaIT"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "2e1bd8ab-159c-4a69-b582-56f255868165"
 		},
 		{
 			"name": "get api-key",
@@ -439,57 +510,6 @@
 						{
 							"key": "vsys",
 							"value": "vsys1"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "commit all",
-			"id": "751f0f73-bb75-4a72-bc0a-2c45b4e8b2ad",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "{{api_key}}",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "{{key_header}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "{{url}}/api/?type=commit&action=all&cmd=<commit-all></commit-all>",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"api",
-						""
-					],
-					"query": [
-						{
-							"key": "type",
-							"value": "commit"
-						},
-						{
-							"key": "action",
-							"value": "all"
-						},
-						{
-							"key": "cmd",
-							"value": "<commit-all></commit-all>"
 						}
 					]
 				}
