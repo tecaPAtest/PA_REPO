@@ -1,0 +1,62 @@
+{
+    "entry": [
+        {
+            "@name": "Khanhpv12",
+            "@location": "vsys",
+            "@vsys": "vsys1",
+            "to": {
+                "member": [
+                    "any"
+                ]
+            },
+            "from": {
+                "member": [
+                    "USERS"
+                ]
+            },
+            "source": {
+                "member": [
+                    "any"
+                ]
+            },
+            "destination": {
+                "member": [
+                    "10.10.10.12/24"
+                ]
+            },
+            "source-user": {
+                "member": [
+                    "any"
+                ]
+            },
+            "category": {
+                "member": [
+                    "any"
+                ]
+            },
+            "application": {
+                "member": [
+                    "any"
+                ]
+            },
+            "service": {
+                "member": [
+                    "application-default"
+                ]
+            },
+            "source-hip": {
+                "member": [
+                    "any"
+                ]
+            },
+            "destination-hip": {
+                "member": [
+                    "any"
+                ]
+            },
+            "action": "allow",
+            "log-start": "yes",
+            "description": "Enable Khanhpv12 access from test networks"
+        }
+    ]
+}
