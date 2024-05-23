@@ -196,7 +196,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"KhanhtecaIT\",\r\n    \"geo-location\": {\r\n      \"latitude\": -90,\r\n      \"longitude\": -180\r\n    },\r\n    \"address\": {\r\n      \"member\": [\r\n        \"10.1.10.25/24\"\r\n      ]\r\n    }\r\n  }\r\n}\r\n",
+							"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"KhanhtecaIT2\",\r\n    \"geo-location\": {\r\n      \"latitude\": -90,\r\n      \"longitude\": -180\r\n    },\r\n    \"address\": {\r\n      \"member\": [\r\n        \"10.1.10.25/24\"\r\n      ]\r\n    }\r\n  }\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -204,7 +204,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/restapi/v10.2/Objects/Regions?location=vsys&vsys=vsys1&name=KhanhtecaIT",
+							"raw": "{{url}}/restapi/v10.2/Objects/Regions?location=vsys&vsys=vsys1&name=KhanhtecaIT2",
 							"host": [
 								"{{url}}"
 							],
@@ -225,7 +225,7 @@
 								},
 								{
 									"key": "name",
-									"value": "KhanhtecaIT"
+									"value": "KhanhtecaIT2"
 								}
 							]
 						}
