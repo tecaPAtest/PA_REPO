@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhteca\",\r\n    \"geo-location\": {\r\n      \"latitude\": -90,\r\n      \"longitude\": -180\r\n    },\r\n    \"address\": {\r\n      \"member\": [\r\n        \"10.1.10.95/24\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"khanhteca\",\r\n    \"geo-location\": {\r\n      \"latitude\": -90,\r\n      \"longitude\": -180\r\n    },\r\n    \"address\": {\r\n      \"member\": [\r\n        \"10.1.10.95/24\"\r\n      ]\r\n    }\r\n  }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
