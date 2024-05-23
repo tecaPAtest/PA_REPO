@@ -1,0 +1,22 @@
+{
+    "entry": [
+        {
+            "@name": "ethernet1/1.15",
+            "ndp-proxy": {
+                "enabled": "no"
+            },
+            "adjust-tcp-mss": {
+                "enable": "no"
+            },
+            "ip": {
+                "entry": [
+                    {
+                        "@name": "192.168.10.25"
+                    }
+                ]
+            },
+            "tag": "10",
+            "comment": "Users"
+        }
+    ]
+}
