@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "8319cc45-2cf7-44b2-8270-ba579097927a",
+		"name": "Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "34759034-8319cc45-2cf7-44b2-8270-ba579097927a"
+	},
+	"item": [
+		{
+			"name": "Regions",
+			"id": "e3972074-e5c9-4b6c-be18-cda41dd3c4f8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhteca\",\r\n    \"geo-location\": {\r\n      \"latitude\": -90,\r\n      \"longitude\": -180\r\n    },\r\n    \"address\": {\r\n      \"member\": [\r\n        \"10.1.10.95/24\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/Regions?location=vsys&vsys=vsys1&name=khanhteca",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"Regions"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "khanhteca"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
