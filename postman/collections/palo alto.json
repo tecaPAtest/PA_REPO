@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "New Folder",
+			"name": "Group Network",
 			"item": [
 				{
 					"name": "Rule-Security",
@@ -72,7 +72,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Create subinterface for Users",
 					"id": "8d8c9d41-0c6a-4b67-8231-3f4a21910b22",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -510,7 +510,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Khanhpv60\",\r\n    \"ip-netmask\": \"10.1.2.60/32\"\r\n    }\r\n}\r\n",
+					"raw": "{\r\n   \"entry\": {\r\n         \"@name\": \"Group_A\",\r\n         \"description\": \"Test_Group\",\r\n         \"static\": {\r\n            \"member\": [\r\n                 \"Khanhpv05\",\r\n                 \"Khanhpv06\"\r\n            ]\r\n        },\r\n        \"tag\": {\r\n            \"member\": [\r\n                \"any\"\r\n            ]\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -518,7 +518,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/restapi/v10.2/Objects/AddressGroups?location=vsys&vsys=vsys1&name=Group1",
+					"raw": "{{url}}/restapi/v10.2/Objects/AddressGroups?location=vsys&vsys=vsys1&name=Group_A",
 					"host": [
 						"{{url}}"
 					],
@@ -539,7 +539,7 @@
 						},
 						{
 							"key": "name",
-							"value": "Group1"
+							"value": "Group_A"
 						}
 					]
 				}
