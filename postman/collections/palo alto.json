@@ -124,6 +124,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Create subinterface",
+					"id": "5fd01a17-b34a-4c45-9697-c88c323bc40a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "6b5c7243-1194-4970-935f-23d5a847cfeb"
