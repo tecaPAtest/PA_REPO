@@ -1,0 +1,14 @@
+{
+  "entry": {
+    "@name": "KhanhtecaIT",
+    "geo-location": {
+      "latitude": -90,
+      "longitude": -180
+    },
+    "address": {
+      "member": [
+        "10.1.10.25/24"
+      ]
+    }
+  }
+}
