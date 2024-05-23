@@ -132,8 +132,32 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{api_key}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "{{key_header}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"ethernet1/1.15\",\r\n            \"ndp-proxy\": {\r\n                \"enabled\": \"no\"\r\n            },\r\n            \"adjust-tcp-mss\": {\r\n                \"enable\": \"no\"\r\n            },\r\n            \"ip\": {\r\n                \"entry\": [\r\n                    {\r\n                        \"@name\": \"192.168.10.25\"\r\n                    }\r\n                ]\r\n            },\r\n            \"tag\": \"10\",\r\n            \"comment\": \"Users\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": ""
 						}
