@@ -20,6 +20,7 @@ files[] = {"path":"postman/collections/New.json","metaData":{}}
 files[] = {"path":"postman/collections/pa123.json","metaData":{}}
 files[] = {"path":"postman/collections/palo alto.json","metaData":{}}
 files[] = {"path":"postman/collections/region.json","metaData":{}}
+files[] = {"path":"postman/collections/Security.json","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3
