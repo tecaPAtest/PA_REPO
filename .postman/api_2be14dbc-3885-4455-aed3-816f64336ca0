@@ -9,7 +9,7 @@ id = 2be14dbc-3885-4455-aed3-816f64336ca0
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"34759034-8319cc45-2cf7-44b2-8270-ba579097927a","path":"Data.json","metaData":{}}
+files[] = {"id":"34759034-8319cc45-2cf7-44b2-8270-ba579097927a","path":"Objects.json","metaData":{}}
 files[] = {"id":"34759034-050f13de-6530-4e50-a679-18be154b3ecf","path":"palo alto.json","metaData":{}}
 
 [config.relations.collections.metaData]

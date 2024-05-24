@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "8319cc45-2cf7-44b2-8270-ba579097927a",
+		"name": "Objects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "34759034-8319cc45-2cf7-44b2-8270-ba579097927a"
+	},
+	"item": [
+		{
+			"name": "Regions",
+			"id": "e3972074-e5c9-4b6c-be18-cda41dd3c4f8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"khanhteca\",\r\n    \"geo-location\": {\r\n      \"latitude\": -90,\r\n      \"longitude\": -180\r\n    },\r\n    \"address\": {\r\n      \"member\": [\r\n        \"10.1.10.99/24\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/Regions?location=vsys&vsys=vsys1&name=khanhteca",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"Regions"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "khanhteca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an address",
+			"id": "9817a084-d7e5-45b9-abc8-688e9b14e96f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"SoanIT\",\r\n    \"ip-netmask\": \"10.1.2.50/32\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/Addresses?location=vsys&vsys=vsys1&name=SoanIT",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"Addresses"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "SoanIT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddressGroups",
+			"id": "94567e0c-3cbb-4b88-a338-9cdec848c824",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"entry\": {\r\n         \"@name\": \"Group_B\",\r\n         \"description\": \"Test_Group\",\r\n         \"static\": {\r\n            \"member\": [\r\n                 \"Khanhpv23\",\r\n                 \"SoanIT\"\r\n            ]\r\n        },\r\n        \"tag\": {\r\n            \"member\": [\r\n                \"any\"\r\n            ]\r\n        }\r\n    }\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/AddressGroups?location=vsys&vsys=vsys1&name=Group_B",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"AddressGroups"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "Group_B"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DynamicUserGroups",
+			"id": "4eb6e68e-274d-4bce-aa30-59f461ed9bc6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"khanhtest\",\r\n    \"description\": \"Test\",\r\n    \"filter\": \"Test\",\r\n    \"tag\": {\r\n      \"member\": [\r\n        \"any\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/DynamicUserGroups?location=vsys&vsys=vsys1&name=khanhtest",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"DynamicUserGroups"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "khanhtest"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
