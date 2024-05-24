@@ -280,7 +280,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"Docker-TEST\",\r\n            \"@location\": \"vsys\",\r\n            \"@vsys\": \"vsys1\",\r\n            \"default\": {\r\n                \"ident-by-ip-protocol\": \"255\"\r\n            },\r\n            \"subcategory\": \"erp-crm\",\r\n            \"category\": \"business-systems\",\r\n            \"technology\": \"browser-based\",\r\n            \"description\": \"Customer Relationship Management app\",\r\n            \"risk\": \"2\",\r\n            \"has-known-vulnerability\": \"yes\",\r\n            \"prone-to-misuse\": \"yes\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"Oracle-TEST\",\r\n            \"@location\": \"vsys\",\r\n            \"@vsys\": \"vsys1\",\r\n            \"default\": {\r\n                \"ident-by-ip-protocol\": \"255\"\r\n            },\r\n            \"subcategory\": \"erp-crm\",\r\n            \"category\": \"business-systems\",\r\n            \"technology\": \"browser-based\",\r\n            \"description\": \"Customer Relationship Management app\",\r\n            \"risk\": \"2\",\r\n            \"has-known-vulnerability\": \"yes\",\r\n            \"prone-to-misuse\": \"yes\"\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -288,7 +288,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/restapi/v10.2/Objects/Applications?location=vsys&vsys=vsys1&name=Docker-TEST",
+					"raw": "{{url}}/restapi/v10.2/Objects/Applications?location=vsys&vsys=vsys1&name=Oracle-TEST",
 					"host": [
 						"{{url}}"
 					],
@@ -309,7 +309,7 @@
 						},
 						{
 							"key": "name",
-							"value": "Docker-TEST"
+							"value": "Oracle-TEST"
 						}
 					]
 				}
@@ -372,6 +372,117 @@
 						{
 							"key": "name",
 							"value": "Devops-test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Application filter",
+			"id": "519220b6-535f-4319-9f54-9a338b5d3a79",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/ApplicationFilters?location=vsys&vsys=vsys1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"ApplicationFilters"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Services",
+			"id": "4cbccdc7-d2f8-49be-9aa9-9525d6e45aab",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"khanh\",\r\n            \"@location\": \"vsys\",\r\n            \"@vsys\": \"vsys1\",\r\n            \"protocol\": {\r\n                \"TCP\": {\r\n                    \"port\": \"9090\",\r\n                    \"override\": {\r\n                        \"no\": {}\r\n                    }\r\n                }\r\n            },\r\n            \"description\": \"Flask webserver default port\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/Services?location=vsys&vsys=vsys1&name=khanh",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"Services"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "khanh"
 						}
 					]
 				}
