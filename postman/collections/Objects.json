@@ -280,7 +280,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"AWS-TEST\",\r\n            \"@location\": \"vsys\",\r\n            \"@vsys\": \"vsys1\",\r\n            \"default\": {\r\n                \"ident-by-ip-protocol\": \"255\"\r\n            },\r\n            \"subcategory\": \"erp-crm\",\r\n            \"category\": \"business-systems\",\r\n            \"technology\": \"browser-based\",\r\n            \"description\": \"Customer Relationship Management app\",\r\n            \"risk\": \"2\",\r\n            \"has-known-vulnerability\": \"yes\",\r\n            \"prone-to-misuse\": \"yes\"\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"@name\": \"Docker-TEST\",\r\n            \"@location\": \"vsys\",\r\n            \"@vsys\": \"vsys1\",\r\n            \"default\": {\r\n                \"ident-by-ip-protocol\": \"255\"\r\n            },\r\n            \"subcategory\": \"erp-crm\",\r\n            \"category\": \"business-systems\",\r\n            \"technology\": \"browser-based\",\r\n            \"description\": \"Customer Relationship Management app\",\r\n            \"risk\": \"2\",\r\n            \"has-known-vulnerability\": \"yes\",\r\n            \"prone-to-misuse\": \"yes\"\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -288,7 +288,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/restapi/v10.2/Objects/Applications?location=vsys&vsys=vsys1&name=AWS-TEST",
+					"raw": "{{url}}/restapi/v10.2/Objects/Applications?location=vsys&vsys=vsys1&name=Docker-TEST",
 					"host": [
 						"{{url}}"
 					],
@@ -309,7 +309,69 @@
 						},
 						{
 							"key": "name",
-							"value": "AWS-TEST"
+							"value": "Docker-TEST"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Application Group",
+			"id": "d50d5b44-5cf4-4265-a4fc-e77fd9d65794",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{api_key}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "{{key_header}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"@name\": \"Devops-test\",\r\n    \"members\": {\r\n      \"member\": [\r\n        \"AWS-TEST\",\r\n        \"Docker-TEST\"\r\n      ]\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/restapi/v10.2/Objects/ApplicationGroups?location=vsys&vsys=vsys1&name=Devops-test",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"restapi",
+						"v10.2",
+						"Objects",
+						"ApplicationGroups"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "vsys"
+						},
+						{
+							"key": "vsys",
+							"value": "vsys1"
+						},
+						{
+							"key": "name",
+							"value": "Devops-test"
 						}
 					]
 				}
